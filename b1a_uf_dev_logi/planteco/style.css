@@ -1,0 +1,145 @@
+body {
+  left: 0;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+/***INDEX***/
+#intro {
+  width: 500px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+  border-right: 1px solid;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
+.parameters {
+  width: 30%;
+  float: left;
+  margin: 20px;
+  border: 1px solid;
+  border-radius: 6px;
+  text-align: center;
+}
+.parameters h2 {
+  text-transform: uppercase;
+}
+.infos {
+  text-align: center;
+  float: left;
+  width: 33%;
+}
+.infos h5 {
+  font-size: 16px;
+}
+form {
+  margin-left: auto;
+  margin-right: auto;
+}
+.capture input {
+  width: 55%;
+}
+
+/***REGPLANTS***/
+.plant {
+  float: left;
+  text-align: center;
+  width: 33%;
+  height: 400px;
+  margin-bottom: 2%;
+}
+.plant h3 {
+  font-size: 25px;
+}
+.plant h4 {
+  font-size: 22px;
+}
+.title {
+  width: 100%;
+  height: 130px;
+}
+.desc {
+  text-align: left;
+  width: 90%;
+  height: 130px;
+}
+img {
+  float: left;
+  width: 25%;
+  height: 25%;
+}
+.tools {
+  float: left;
+  width: 33%;
+}
+.tools p {
+  font-weight: bold;
+}
+/***RASPBERRY***/
+#theplant {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 30px;
+}
+#theplant h2 {
+  margin-bottom: 7%;
+}
+.selplant input {
+  width: 17%;
+}
+.details {
+  display: inline-block;
+  width : 32%;
+  border: 2px solid;
+  border-radius: 6px;
+  margin-bottom: 6%;
+}
+.details p {
+  font-size: 40px;
+}
+#execute {
+  margin-left: 680px;
+  width: 270px;
+}
+#tab {
+  text-align: center;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#tab h3 {
+  font-weight: bold;
+  font-size: 26px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 100px;
+}

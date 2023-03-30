@@ -1,0 +1,105 @@
+/*--------------------CONTENER--------------------*/
+/***Contener's base***/
+#contenerr {
+  width: 870px;
+  height: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 150px;
+  border-radius: 3px;
+  letter-spacing: 2px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 12px 1px rgba(0, 0, 0, 0.7);
+}
+/***Image parameters***/
+.pdp {
+  height: 300px;
+  margin-left: 20px;
+  border-radius: 2px;
+  box-shadow: 5px 4px 14px 2px rgba(0, 0, 0, 0.7);
+}
+/***Contener text***/
+#contenerr h2, .pdp {
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  font-weight: bold;
+}
+#contenerr h2 {
+  margin-left: -5px;
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(17, 17, 17);
+}
+/***Paragraph parameters***/
+.pdp, #contenerr p {
+  float: left;
+  display: inline-block;
+}
+#contenerr p {
+  position: relative;
+  text-align: left;
+  width: 475px;
+  margin-left: 2px;
+  font-size: 18px;
+}
+/***Ultim title***/
+.bottomTitle {
+  position: absolute;
+  margin-top: 280px;
+  margin-left: 340px;
+}
+.bottomTitle p {
+  color: rgb(15, 32, 65);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+/***Contener's bottom***/
+#bottom {
+  position: relative;
+  width: 820px;
+  height: 100px;
+  margin-top: 335px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.left {
+  position: absolute;
+  width: 30%;
+  margin-top: 20px;
+  text-align: left;
+}
+.lenovo {
+  width: 80px;
+  margin-left: 80px;
+}
+.mid {
+  position: relative;
+  width: 30%;
+  margin-top: -6px;
+  text-align: center;
+  display: inline-block;
+}
+.fedora {
+  width: 50px;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+.right {
+  position: relative;
+  width: 30%;
+  margin-top: 20px;
+  text-align: right;
+  display: inline-block;
+}
+.atom {
+  width: 35px;
+  margin-top: -10px;
+  margin-right: 17px;
+}

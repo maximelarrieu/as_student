@@ -1,0 +1,9 @@
+kind: pipeline
+type: docker
+name: pipeline-test
+
+steps:
+- name: cat
+  image: docker
+  commands:
+  - cat README.md

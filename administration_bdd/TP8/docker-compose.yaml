@@ -1,0 +1,43 @@
+version: '3.7'
+
+services:
+  maria-master:
+    image: mariadb:10.5
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./backups:/backups
+      - ./config/master.cnf:/etc/mysql/mariadb.conf.d/master.cnf
+      - ./scripts:/scripts
+    networks:
+      - mynetwork
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - 9090:9090
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./backups:/backups
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - mynetwork
+  mysql-exporter:
+    image: prom/mysqld-exporter:latest
+    ports:
+      - 9104
+    environment:
+      DATA_SOURCE_NAME: root:password@(maria-master:3306)/db_to_export
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./backups:/backups
+      - ./config/master.cnf:/etc/mysql/mariadb.conf.d/master.cnf
+      - ./scripts:/scripts
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

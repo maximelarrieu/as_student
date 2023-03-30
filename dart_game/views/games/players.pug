@@ -1,0 +1,56 @@
+extends skeleton.pug 
+
+block content 
+
+    div
+        - console.log(game._id)
+    div
+
+    h1 Liste des joueurs de la partie 
+
+    p= game.name
+    p= test
+
+
+        p Participant(s)
+        form(action=`/games/${game._id}/players?_method=DELETE`, method="POST")
+            table(style="width:40%", border=2)
+                tr
+                    th Nom 
+                    th Email 
+                    th Actions 
+                if gameplayers.length === 0
+                    p Aucun joueur inscrit 
+                else
+                    each player in gameplayers
+                        tr(style="text-align: center") 
+                            td= player.playerId.name
+                            td= player.playerId.email
+                            td
+                                input(type="checkbox", name="playerId" value=player.playerId._id)
+            input(type="submit" value="Retirer")
+        p Reste des joueurs
+        form(action=`/games/${game._id}/players/`, method="POST")
+            table(style="width:40%", border=2)
+                tr
+                    th Nom 
+                    th Email 
+                    th Actions 
+                each player in players
+                    if !player.gameplayers
+                        tr(style="text-align: center") 
+                            td= player.name
+                            td= player.email
+                            td
+                                input(type="checkbox", name="playerId" value=player._id)
+                    else 
+                        tr(style="text-align: center") 
+                            td= player.name 
+                            td= player.email
+                            td
+                                input(type="checkbox", name="playerId" value=player._id) 
+            input(type="submit" value="Ajouter")
+
+    p
+        a(href=`/games/${game._id}`) Retour au détails de la partie
+    

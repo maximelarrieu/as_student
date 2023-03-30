@@ -1,0 +1,78 @@
+body {
+  top: 0;
+  left: 0;
+}
+
+#login {
+  width: 30%;
+  height: 250px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid grey;
+  border-radius: 3px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 12px 1px rgba(0, 0, 0, 0.7);
+}
+label {
+  font-size: 30px;
+}
+input[type=text], input[type=password] {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  width: 92%;
+  padding: 15px;
+  margin-bottom: 9px;
+  border: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
+}
+/***Submit button animation***/
+input[type="submit"] {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  border: none;
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+input[type="submit"]:hover {
+  animation: banimate 4s linear infinite;
+
+}
+@keyframes banimate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+input[type="submit"]:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.4s;
+}
+input[type="submit"]:hover:before {
+  opacity: 1;
+}

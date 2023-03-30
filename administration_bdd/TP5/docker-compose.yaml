@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./backups:/backups
+
+  mymariadb:
+    image: mariadb:10.4
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./maria:/var/lib/mysql
+      - ./backups:/backups

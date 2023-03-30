@@ -1,0 +1,87 @@
+/*--------------------CONTENER--------------------*/
+/***Contener's base***/
+#contener {
+  width: 955px;
+  height: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 150px;
+  padding-top: 7px;
+  padding-left: 15px;
+  border-radius: 3px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 12px 1px rgba(0, 0, 0, 0.7);
+}
+#contener h2 {
+  margin-top: 5px;
+  font-size: 29px;
+  letter-spacing: 1px;
+  color: rgb(17, 17, 17);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#contener a {
+  text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+  -webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+/*--------------------MAIN--------------------*/
+/***Main contenu***/
+#main {
+  position: relative;
+  width: 955px;
+  height: 680px;
+  top: 150px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  padding-left: 10px;
+  border-radius: 2px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 12px 1px rgba(0, 0, 0, 0.7);
+}
+#contener h2 {
+  font-size: 29px;
+  font-weight: bold;
+}
+#contener a {
+  font-weight: bold;
+}
+#main a {
+  color: rgb(64, 64, 64);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.realised {
+  margin-top: 5%;
+  color: rgb(15, 32, 65);
+  font-weight: bold;
+}
+/***Icons images projects***/
+.projet img {
+  margin-top: 15px;
+  position: relative;
+  width: 17%;
+  height: 160px;
+  border-radius: 6px;
+}
+.projet img, .description {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+/***Project description***/
+.description {
+  width: 750px;
+  margin-left: 15px;
+}

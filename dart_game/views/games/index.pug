@@ -1,0 +1,27 @@
+extends skeleton.pug
+
+block content
+    h1= title
+    p
+        a(href="/players") Liste des joueurs    
+    
+    form(action=`/games/new`, method="GET")
+        input(type="submit" value="Créer une partie")
+
+    if games.length === 0
+       p Pas de parties trouvées
+    else
+        table(style="width:50%", border=5)
+            tr
+                th Nom 
+                th Mode 
+                th Actions
+            each game in games 
+                tr(style="text-align: center") 
+                    td= game.name 
+                    td= game.mode
+                    td
+                        form(action=`/games/${game.id}`, method="GET")
+                            input(type="submit" value="Détails")
+                        form(action=`/games/${game.id}?_method=DELETE`, method="POST")
+                            input(type="submit" value="Supprimer")

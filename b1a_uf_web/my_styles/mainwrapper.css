@@ -1,0 +1,10 @@
+/*--------------------MAINWRAPPER--------------------*/
+/***Generals parameters, my page's base***/
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(circle at center, rgb(131, 131, 131), rgb(236, 236, 236));
+  color: white;
+}

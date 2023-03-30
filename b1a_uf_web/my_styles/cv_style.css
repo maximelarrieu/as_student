@@ -1,0 +1,226 @@
+/*--------------------CONTENER--------------------*/
+/***Contener's base***/
+#contener {
+  width: 970px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 150px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 8px 1px rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+}
+#pdp {
+  border-radius: 2px;
+  box-shadow: 5px 4px 14px 2px rgba(0, 0, 0, 0.7);
+}
+#contener h2, #contener img, button {
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 18px;
+  margin-left: 18px;
+}
+#contener h2 {
+  margin-left: 28px;
+  font-size: 29px;
+  letter-spacing: 1px;
+  color: rgb(17, 17, 17);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#contener h3 {
+  position: absolute;
+  top: 64px;
+  font-size: 15px;
+  margin-left: 267px;
+  color: rgb(15, 32, 65);
+}
+#intro {
+  position: absolute;
+  width: 450px;
+  margin-left: 261px;
+  margin-top: 120px;
+}
+#lkRedirect {
+  color: rgb(64, 64, 64);
+  position: absolute;
+  width: 170px;
+  margin-left: 783px;
+  margin-top: 120px;
+  text-align: center;
+}
+#lkRedirect a {
+  position: relative;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(64, 64, 64);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#lkRedirect img {
+  width: 50px;
+  margin-left: 60px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/***Button download config***/
+button {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  background-color: rgb(128, 128, 128, 0.77);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 8px black;
+  right: 20px;
+}
+button:hover {
+  background-color: rgba(140, 140, 140);
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+/*--------------------MAIN--------------------*/
+/***Main contenu***/
+#main {
+  position: relative;
+  width: 960px;
+  min-height: 1270px;
+  top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  padding-left: 10px;
+  border-radius: 3px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 8px 1px rgba(0, 0, 0, 0.7);
+}
+#main h3 {
+  letter-spacing: 2px;
+}
+
+/***EDUCATION***/
+.education {
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  margin-bottom: 4px;
+  height: 130px;
+}
+.education h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 4px;
+  color: rgb(64, 64, 64);
+}
+.education h5 {
+  margin-top: -15px;
+  font-weight: bold;
+}
+.education h6 {
+  margin-top: -10px;
+  color: rgb(15, 32, 65);
+  font-size: 13px;
+}
+
+/***EXP PRO***/
+.pro {
+  position: relative;
+  margin-top: 30px;
+  text-align: left;
+  text-align: center;
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 30px;
+}
+.pro h4 {
+  text-transform: uppercase;
+  color: rgb(64, 64, 64);
+  margin: 0;
+}
+.pro h5 {
+  margin-top: 15px;
+}
+.pro h6 {
+  color: rgb(15, 32, 65);
+  margin-top: -10px;
+  margin-bottom: -15px;
+  font-size: 13px;
+}
+#context {
+  color: black;
+  font-size: 13px;
+}
+.date {
+  text-align: center;
+}
+
+/***SKILLS***/
+/***Skill bars***/
+.skillbar {
+  position: relative;
+  margin-top: 30px;
+  width: 99%;
+  height: 30px;
+  background: #eeeeee;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #222;
+}
+.title {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  padding-left: 10px;
+  float: left;
+  font-weight: bold;
+  color: black;
+  line-height: 2.5;
+  z-index: 10000;
+  border-top-left-radius: 5px;
+}
+.value_progressing {
+  position: relative;
+  float: right;
+  padding-right: 10px;
+  line-height: 2.5;
+  font-weight: bold;
+  color: #455a64;
+  z-index: 10000;
+}
+.progress {
+  height: 30px;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 2px 0 2px #555;
+}
+.skillColor {
+  background: rgba(38, 32, 96, 0.72);
+}
+.skill {
+  background: rgba(94, 94, 94, 0.5);
+}
+/***HOBBIES***/
+#hobbies {
+  margin-top: 30px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+#hobbies img {
+  display: inline-block;
+  width: 100px;
+  padding-left: 100px;
+}

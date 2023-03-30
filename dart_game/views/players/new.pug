@@ -1,0 +1,16 @@
+extends skeleton.pug
+
+block content
+
+    a(href="/players") Accueil joueurs
+
+    h1 Création d'un joueur
+
+    form(action="/players", method="POST")
+        p 
+            | name: 
+            input(type="text", required, name="name")
+        p
+            | email: 
+            input(type="email", required, name="email")
+        input(type="submit" value="Créer")

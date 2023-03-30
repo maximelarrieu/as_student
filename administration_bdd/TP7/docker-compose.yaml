@@ -1,0 +1,60 @@
+services:
+  maria_cluster_1:
+    image: mariadb:10.5
+    ports:
+      - 4444
+    volumes:
+      - ./backups:/backups
+      - ./cnf/cluster_1.cnf:/cnf/cluster_1.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    # environment:
+      wsrep_provider: "/usr/lib/libgalera_smm.so"
+      wsrep_cluster_address: "gcomm://maria_cluster_1, maria_cluster_2, maria_cluster3"
+      binlog_format: ROW
+      default_storage_engine: InnoDB
+      innodb_autoinc_lock_mode: 2
+      innodb_doublewrite: 1
+      query_cache_size: 0
+      wsrep_on: "ON"
+      wsrep_node_address: "maria_cluster_1"
+      wsrep_node_name: "Node1"
+    command: --wsrep-new-cluster
+  maria_cluster_2:
+    image: mariadb:10.5
+    ports:
+      - 4567
+    volumes:
+      - ./backups:/backups
+      - ./cnf/cluster_2.cnf:/cnf/cluster_2.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      wsrep_provider: "/usr/lib/libgalera_smm.so"
+      wsrep_cluster_address: "gcomm://maria_cluster_1, maria_cluster_2, maria_cluster3"
+      binlog_format: ROW
+      default_storage_engine: InnoDB
+      innodb_autoinc_lock_mode: 2
+      innodb_doublewrite: 1
+      query_cache_size: 0
+      wsrep_on: "ON"
+      wsrep_node_address: "maria_cluster_2"
+      wsrep_node_name: "Node2"
+  maria_cluster_3:
+    image: mariadb:10.5
+    ports:
+      - 4568
+    volumes:
+      - ./backups:/backups
+      - ./cnf/cluster_3.cnf:/cnf/cluster_3.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      wsrep_provider: "/usr/lib/libgalera_smm.so"
+      wsrep_cluster_address: "gcomm://maria_cluster_1, maria_cluster_2, maria_cluster3"
+      binlog_format: ROW
+      default_storage_engine: InnoDB
+      innodb_autoinc_lock_mode: 2
+      innodb_doublewrite: 1
+      query_cache_size: 0
+      wsrep_on: "ON"
+      wsrep_node_address: "maria_cluster_3"
+      wsrep_node_name: "Node3"

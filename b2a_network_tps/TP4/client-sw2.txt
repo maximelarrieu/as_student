@@ -1,0 +1,56 @@
+client-sw2#show run
+Building configuration...
+
+Current configuration : 1828 bytes
+!
+! Last configuration change at 16:53:40 UTC Fri Apr 10 2020
+!
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname client-sw2
+!
+
+...
+
+interface Ethernet0/0
+ switchport access vlan 10
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport voice vlan 20
+ duplex auto
+!         
+interface Ethernet0/0.10
+ encapsulation dot1Q 10
+!         
+interface Ethernet0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ duplex auto
+!         
+interface Ethernet0/2
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!         
+interface Ethernet0/3
+ switchport access vlan 20
+ switchport mode access
+ duplex auto
+!         
+interface Ethernet1/0
+ switchport access vlan 10
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 10,20
+ switchport mode trunk
+ switchport voice vlan 20
+ duplex auto
+!   
+
+...
+
+end       
+        

@@ -1,0 +1,37 @@
+#map, #spawned, h3 {
+	display: inline-block;
+	vertical-align: top;
+}
+#map {
+	float: left;
+}
+.spawn, #map {
+	display: inline-block;
+	vertical-align: top;
+}
+.spawn {
+	width: 400px;
+	height: 400px;
+	margin-top : 80px;
+	margin-left: -300px;
+}
+#map, #modif {
+	display: inline-block;
+}
+.modif {
+	/*border: 1px solid;*/
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+}
+input {
+	width: 320px;
+}
+select {
+	width: 310px;
+}
+#loginform {
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -1,0 +1,104 @@
+/*--------------------CONTENER--------------------*/
+/***Contener's base***/
+#entreprise {
+  width: 72%;
+  min-height: 350px;
+  margin-left: 235px;
+  margin-right: auto;
+  padding-left: 20px;
+  position: relative;
+  top: 150px;
+  border-radius: 2px;
+  background-color: rgba(75, 75, 75, 0.38);
+  border: 2px solid rgb(25, 56, 120);
+  box-shadow: 15px 12px 12px 1px rgba(0, 0, 0, 0.7);
+}
+#entreprise h2 {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  font-size: 29px;
+  letter-spacing: 1px;
+  color: rgb(17, 17, 17);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#entreprise h3 {
+  margin-top: 0px;
+  color: rgb(25, 56, 120);
+}
+#intro {
+  margin-top: 0px;
+}
+#intro h3 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: -7px;
+}
+#ah {
+  border: 0.9px simple black;
+}
+p {
+  margin-right: 30px;
+}
+/*--------------------SECTION--------------------*/
+#section {
+  position: relative;
+  top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+  width: 80%;
+  /* border: 1px solid black; */
+}
+/*--------------------BILLET--------------------*/
+/***Start billet***/
+.billets {
+  position: relative;
+  width: 29.4%;
+  margin: 10px;
+  height: 500px;
+  background-color: rgba(235, 235, 235, 0.68);
+  border: 2px solid black;
+  border-radius: 6px;
+  color: black;
+  padding-left: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.billets:hover {
+  box-shadow: 15px 12px 12px 1px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+.billets a {
+  color: black;
+  text-decoration: none;
+}
+.billets img {
+  margin-left: -20px;
+  width: 104.5%;
+  height: 200px;
+  border-radius: 3px;
+}
+/***Corps du billet***/
+.corps {
+  width: 97%;
+  margin-left: -7px;
+  /* border: 1px solid black; */
+}
+.corps h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+.corps h4 {
+  margin-top: 0px;
+  color: grey;
+  font-size: 0.7em;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+.corps h3 {
+  margin-top: 0px;
+  color: rgb(25, 56, 120);
+  font-size: 1em;
+}

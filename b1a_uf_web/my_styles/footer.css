@@ -1,0 +1,79 @@
+/*--------------------FOOTER--------------------*/
+/***Footer configuration***/
+footer {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-size: 12px;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(92, 96, 99, 0.8);
+}
+#blockfooter {
+  width: 33%;
+  height: 33px;
+  margin-top: 0;
+  padding-top: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: baseline;
+  vertical-align: top;
+}
+#blockfooter a {
+  width: 24px;
+  height: 24px;
+  color: black;
+  background: #fff;
+  text-align: center;
+  line-height: 25px;
+  margin: 0 10px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+#blockfooter a img {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+#blockfooter a:hover img {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+#blockfooter a:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: .5s;
+  z-index: 2;
+}
+#blockfooter a:hover:before {
+  top: 0;
+}
+.left {
+  padding-left: 5px;
+  margin-top: 15px;
+  text-align: left;
+}
+.right {
+  margin-right: 0px;
+  margin-top: 15px;
+}
+/* footer a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+} */

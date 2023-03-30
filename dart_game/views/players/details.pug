@@ -1,0 +1,19 @@
+extends skeleton.pug
+
+block content
+
+    a(href="/players") Accueil joueurs
+
+    h1 Détails du joueur
+
+    h4 Nom du joueur
+    p= player.name 
+
+    h4 Email du joueur
+    p= player.email
+
+    form(action=`/players/${player.id}/edit`, method="GET")
+        input(type="submit" value="Éditer")
+    
+    form(action=`/players/${player.id}?_method=DELETE`, method="POST")
+        input(type="submit" value="Supprimer")

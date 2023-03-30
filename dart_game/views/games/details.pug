@@ -1,0 +1,109 @@
+extends skeleton.pug
+
+block content
+    div
+        a(href="/games") Accueil parties
+
+        h1 Détails de la partie
+
+        if (game.status == 'draft')
+            form(action=`/games/${game._id}/edit`, method="GET")
+                input(type="submit" value="Éditer")
+            
+            form(action=`/games/${game._id}?_method=DELETE`, method="POST")
+                input(type="submit" value="Supprimer")
+        else if (game.status == 'started')
+            p La partie à déjà commencée...
+            form(action=`/games/${game._id}/edit`, method="GET")
+                input(type="submit" value="Éditer" disabled="disabled")
+            
+            form(action=`/games/${game._id}?_method=DELETE`, method="POST")
+                input(type="submit" value="Supprimer" disabled="disabled")
+        else 
+            p La partie est terminée...
+            form(action=`/games/${game._id}/edit`, method="GET")
+                input(type="submit" value="Éditer" disabled="disabled")
+            form(action=`/games/${game._id}?_method=DELETE`, method="POST")
+                input(type="submit" value="Supprimer")
+        
+    //- each g in game
+    h4 Nom de la partie
+    p= game.name 
+    p= game.status
+
+    h4 Mode de jeu
+    p= game.mode
+
+        h4 Joueurs 
+        form(action=`/games/${game._id}/players`, method="GET")
+            input(type="submit" value="Gestion des joueurs")
+
+        table(style="width: 20%", border=2)
+            tr 
+                th Nom 
+                th Ordre 
+                th Tirs restants
+                th Score
+            if gameplayers.length === 0
+                p Pas de joueurs inscrits à cette partie 
+            else
+                each player in gameplayers
+                    tr(style="text-align: center")
+                        td= player.playerId.name
+                        td= player.playerId.order 
+                        td= player.remainingShots
+                        td= player.score
+        div 
+            hr
+
+            h1 Partie en cours ...
+
+            h4 Règles du jeu :
+            if game.mode == '301'
+                p Chaque joueur commence la partie avec 301 points. 
+                p Chacun leur tour, les joueurs vont lancer trois fléchettes afin de baisser leur score.
+                p Le premier joueur qui arrive exactement à zéro a gagné.
+                p La partie se terminera quand tous les joueurs auront 0 points.
+            else if game.mode == 'around-the-world'
+                p Chaque joueur commence la partie avec 0 point.
+                p Chacun leur tour, les joueurs vont lancer trois fléchettes afin de monter leur score.
+                p Le but étant de viser les cibles dans l'ordre.
+                p Le premier joueur qui arrive à faire le tour de la cible a gagné.
+                p La partie se terminera quand tous les joueurs auront 20 points.
+
+            if gameplayers.length >= 2
+                if game.status == 'ended'
+                    h3 La partie est terminée !
+                else if game.status == 'draft'
+                    h3 La partie n'a pas encore commencé
+                else
+                    h4 A vous de jouer 
+                    
+                    if game.currentPlayerId != null
+                        p= game.currentPlayerId.name
+                    else
+                        p Aucun joueur n'a rejoint la partie
+
+                    form(action=`/games/${game._id}/shots`, method="POST")
+                        p Secteur
+                        - let index = 1
+                        while index <= 20
+                            label= index
+                            input(type="radio", name="sector", value=index++)
+                        if game.mode === '301'
+                            label 25
+                            input(type="radio", name="sector", value=25)
+                        else 
+
+
+                        p Multiplicateur
+                        - let jindex = 1
+                        while jindex <= 3
+                            label= jindex
+                            input(type="radio", name="multiplicator", value=jindex++)
+                            if sector === 25
+                                input(type="radio", name="multiplicator", value=3, disabled="disabled")
+                        p
+                        input(type="submit", value="Tirer!")
+            else
+                p Il faut au moins 2 joueurs pour lancer la partie

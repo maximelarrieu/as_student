@@ -1,0 +1,20 @@
+extends skeleton.pug 
+
+block content 
+
+    a(href="/games") Accueil
+
+    h1 Edition d'une partie
+
+    form(action=`/games/${game.id}?_method=PATCH`, method="POST")
+        select(name="mode" value=`${game.mode}`)
+            option(value="301") 301
+            option(value="around-the-world") Around the World
+        p 
+            | name: 
+            input(type="text", required, name="name", value=`${game.name}`)
+        select(name="status" value=`${game.status}`)
+            option(value="draft") Brouillon
+            option(value="started") Démarée
+        p
+        input(type="submit" value="Editer")

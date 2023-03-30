@@ -1,0 +1,84 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+\ifxetexorluatex
+
+  \setmainfont{Carlito}
+\else
+
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Thomas Dumont}
+\tagline{Etudiant à Ingésup au campus YNOV}
+\personalinfo{
+  \email{thomas.dumont@ynov.com}
+    \phone{06 58 95 87 31}
+  \location{Bordeaux, France}
+
+}
+
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+\AtBeginEnvironment{itemize}{\small}
+
+\cvsection[page1sidebar]{Expérience}
+
+\cvevent{Employé}{Le chai des chartrons}{Juin 2016 et août 2018}{Bordeaux, France}
+\begin{itemize}
+\item Organisation des produits mis en vente
+\item Rangement d'objet divers
+\end{itemize}
+
+\divider
+
+\cvevent{Stagiaire}{Proformats}{Décembre 2013}{Bordeaux, France}
+\begin{itemize}
+\item Apprentissage du métier
+\item 
+\end{itize}
+
+
+
+\cvsection[page1sidebar]{Projection dans 6 ans}
+\cvevent{Travailler dans le domaine de l'informatique}{}{}{France}
+
+\begin{itemize}
+\item 		Création start-up
+\item 		Jeux-vidéo
+\item 		Cybersécurité
+\end{itemize}
+
+\end{itemize}
+
+
+\end{itemize}
+
+
+\end{itemize}
+
+\divider
+
+\clearpage
+
+\end{document}
