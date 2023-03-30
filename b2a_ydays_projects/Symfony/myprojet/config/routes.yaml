@@ -1,0 +1,38 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+base:
+  path: /base
+  controller: App\Controller\LuckyController::base
+
+home:
+  path: /
+  controller: App\Controller\LuckyController:home
+
+name:
+  path: /name/{name}
+  controller: App\Controller\LuckyController:name
+
+movies:
+  path: /movies
+  controller: App\Controller\MovieController:showMovies
+
+formMovie:
+  path: /movie/create
+  controller: App\Controller\MovieController:createMovie
+
+updateMovie:
+  path: /movie/update/{id}
+  controller: App\Controller\MovieController:updateMovie
+
+deleteMovie:
+  path: /movie/delete/{id}
+  controller: App\Controller\MovieController:deleteMovie
+
+category:
+  path: /category/{id}
+  controller: App\Controller\CategoryController:getCategory
+
+movie:
+  path: /movie/{id}
+  controller: App\Controller\MovieController:showMovie

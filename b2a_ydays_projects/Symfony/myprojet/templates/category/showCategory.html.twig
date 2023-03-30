@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}Category{% endblock %}
+
+{% block body %}
+    <h1 class="py-5 text-center">Category : <b>{{ category.title }}</b></h1>
+    <div class="row" style="width: 100%; margin-left: 8%">
+        {% for movie in category.movies %}
+            {% include "_includes/card.html.twig" with {'movie': movie} %}
+        {% endfor %}
+    </div>
+{% endblock %}

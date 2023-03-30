@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Films{% endblock %}
+
+{% block body %}
+    <h1 class="py-5 text-center"><i class="fas fa-film" style="margin-right: 10px"></i>Movies<i class="fas fa-film"style="margin-left: 10px"></i></h1>
+    <a class="btn btn-outline-success" style="margin-left: 20px;"  href="{{ path('formMovie') }}" role="button"><i class="fas fa-plus" style="margin-right: 10px"></i>Add movie</a>
+    {% for movie in movies %}
+        <div class="media" style="margin: 20px">
+            <img src="{{ movie.image }}" class="mr-4" alt="miniature" style="height: 200px; width: 300px; border-radius: 6px">
+            <div class="media-body">
+                <h5 class="mt-3">{{ movie.title }}</h5>
+                <p>{{ movie.synopsis }}</p>
+                <p style="font-weight: bold">{{ movie.releasedAt|date('d-M-Y') }}</p>
+                <a class="btn btn-outline-info" href="{{ path('movie', {'id': movie.id}) }}" role="button"><i class="fas fa-eye" style="margin-right: 10px"></i>See more...</a>
+                <a class="btn btn-outline-warning" href="{{ path('updateMovie', {'id': movie.id}) }}" role="button"><i class="fas fa-pen" style="margin-right: 10px"></i>Update movie</a>
+                <a class="btn btn-outline-danger" href="{{ path('deleteMovie', {'id': movie.id}) }}" role="button"><i class="fas fa-trash-alt" style="margin-right: 10px"></i>Delete movie</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

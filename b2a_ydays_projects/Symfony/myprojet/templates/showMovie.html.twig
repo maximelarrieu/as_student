@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Movie{% endblock %}
+
+{% block body %}
+    <div class="card" style="width: 38rem; margin-left: auto; margin-right:auto; margin-top: 30px">
+        <img src="{{ movie.image }}" class="card-img-top" alt="miniature" style="width: 100%;">
+        <div class="card-body text-center">
+            <h1 class="">{{ movie.title }}</h1>
+            <p class="card-text">{{ movie.synopsis }}</p>
+            <b>{{ movie.releasedAt|date('d-M-Y') }}</b>
+        </div>
+    </div>
+
+{% endblock %}

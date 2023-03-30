@@ -1,0 +1,11 @@
+<div class="card" style="width: 500px; height: 450px;margin: 20px; box-shadow: 10px 10px 10px darkgrey">
+    <img src="{{movie.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{movie.title}}</h5>
+        <p class="card-text">{{movie.synopsis}}</p>
+    </div>
+
+    <div class="card-footer">
+        <small class="text-muted">{{movie.releasedAt|date('d-M-Y')}}</small>
+    </div>
+</div>
